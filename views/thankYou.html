@@ -1,0 +1,35 @@
+<div class="alert alert-danger" ng-show="data.orderError">
+	Error({{data.orderError.status}}).  The order could not be placed.
+	<a href="#/products" class="alert-link">Click here and try again</a>
+</div>
+
+<div class="well" ng-hide="data.orderError">
+    <h2>Thank You</h2>
+    Thanks placing your order, We'll ship your goods as soon as possible. If you need to contact us, use reference{{data.id}}.
+
+    <form>
+    	<fieldset>
+    		<legend>Your Order Details:</legend>
+    		<strong>Name:{{data.name}}</strong><br>
+    		Address: {{data.street}}, {{data.city}}, {{data.state}}, {{data.zip}}, {{data.country}} <br>
+            <h4>Order :</h4> 
+               <table class="table table-striped" >
+                  <thead>
+                  	<tr>
+                  		<td>Product Name</td>
+                        <td>Price</td>
+                        <td>Count</td>
+                  	</tr>
+                  </thead>
+                  <tbody>
+                  	<tr ng-repeat="good in showProducts">
+                  		<td>{{good.name}}</td>
+                  		<td>{{good.price}}</td>
+                  		<td>{{good.count}}</td>
+                  	</tr>
+                  </tbody>
+               </table>
+               
+    	</fieldset>
+    </form>
+</div>	

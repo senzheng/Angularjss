@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app="sportsstoreAdmin">
+  <head>
+  	<title>Administration</title>
+  	<link href="bootstrap.css" rel="stylesheet"/>
+    <link href="bootstrap-theme.css" rel="stylesheet"/>
+    <script src="angular.js"></script>
+    <script src="ngmodules/angular-route.js"></script>
+    <script src="controllers/adminController.js"></script>
+  </head>
+  <body>
+  	<div ng-controller="productsCtrl">
+  
+  <div class="alert alert-info">
+    Please Manage The Product List
+  </div>
+
+  <div Class="alert alert-success" ng-show="update">
+       {{ update }}
+  </div>
+
+  <div class="alert alert-danger" ng-hide="error">
+       The error is {{error.status}}
+  </div>
+
+
+  
+</div>
+  </body>
+</html>

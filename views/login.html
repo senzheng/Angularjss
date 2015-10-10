@@ -1,0 +1,99 @@
+<style>
+   input {
+   	  width: 200px;
+   }
+
+   h3 {
+   	text-align: center
+   }
+
+   .form-group {
+   	text-align: center
+   }
+</style>
+
+<div ng-controller="signupCtrl">
+
+   <div class="alert alert-danger">
+   	 {{message}}
+   </div>
+
+   <form class="signForm" novalidate>
+   	 <div class="well">
+   	 	<h3>Sign Up Here</h3>
+          <!--right below: enter first name -->
+   	 	  <div class="form-group">
+   	 		
+   	 		<input  name="Firstname" type="text" ng-model="data.Firstname" value="FirstName" required/>
+   	 		<span class="error">
+   	 	  </div>
+          <!--right below: enter last name -->
+          <div class="form-group">
+          	<label>Last Name</label><br>
+          	<input name="Lastname" type="text" ng-model="data.Lasrname" required/>
+          </div>
+           <!--right below: enter phone number -->
+          <div class="form-group">
+          	<label>Phone Number</label><br>
+          	<input name="Phonenumber" type="text" ng-mode="data.Phonenumber" required/>
+          </div>
+          <!--right below: enter DOB -->
+          <div class="form-group">
+          	<label>Birthday</label><br>
+          	<input name="DOB" type="text" ng-model="data.DOB" required/>
+          </div>
+
+          <!--right below: enter email-->
+          <div class="form-group">
+            <label>Email</label><br>
+            <input name="Email" type="text" ng-model="data.Email" required/>
+          </div>
+          <!--right below: enter address: street town zip and country-->
+          <div class="form-group">
+             <label>Street</label><br>
+             <input name="Street" type="text" ng-model="data.Street" required/>
+          </div>
+          <div class="form-group">
+             <label>City</label><br>
+             <input name="City" type="text" ng-model="data.City" required/>
+          </div>
+          <div class="form-group">
+             <label>State</label><br>
+             <input name="state" type="text" ng-model="data.State" required/>
+          </div>
+          <div class="form-group">
+              <label>Zip Code</label><br>
+              <input name="Zip" type="text" ng-model="data.Zip" required/>
+          </div>
+          <div class="form-group">
+              <label>Country</label><br>
+              <input name="Country" type="text" ng-model="data.Country" required/>
+          </div>
+
+          <!-- As Follow is for registration purpose-->
+
+          <div class="form-group">
+          	 <label>Username</label><br>
+          	 <input name="Username" type="text" ng-model="data.Username" required/>
+          </div>
+          <div class="form-group">
+             <label>Password</label><br>
+             <input name="Password" type="text" ng-model="data.Password" required/>
+          </div>
+          <div class="form-group">
+              <label>Confirm Password</label><br>
+              <input name="confirmedPassword" type="text" ng-model="comfirmedPassword" required/>
+          </div>
+         
+           <div class="text-center">
+               <button class="btn btn-primary" ng-disabled="signForm.$invalid" ng-click="createUser(data)">
+      	      submit
+               </button>
+           </div>
+
+   	 </div>
+
+   	
+
+   </form>
+</div>

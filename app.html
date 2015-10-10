@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html ng-app="sportsstore">
+ <head>
+    <title></title>
+    <link href="bootstrap.css" rel="stylesheet"/>
+    <link href="bootstrap-theme.css" rel="stylesheet"/>
+    <script src="angular.js"></script>
+    <script src="controllers/sportStore.js"></script>
+    <script src="filters/customFilters.js"></script>
+    <script src="controllers/productListControllers.js"></script>
+    <script src="components/cart/cart.js"></script>
+    <script src="ngmodules/angular-route.js"></script>
+    <script src="controllers/checkoutController.js"></script>
+ </head>
+ <body ng-controller="sportsstoreCtrl">
+  <div class="navbar navbar-inverse">
+       <a class="navbar navbar-brand" href="#">Sport Store</a>
+       <cart-summary/>
+  </div>
+  <ng-view />
+ </body>
+</html>
